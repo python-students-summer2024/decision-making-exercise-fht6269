@@ -27,7 +27,12 @@ def is_square():
       :returns: True if square (i.e. if equal length and height), False otherwise.
     """
     #### write your solution for this function below here. ####
-
+    width = float(input("Enter width of area: "))
+    length = float(input("Enter legnth of area: "))
+    if width == length:
+        return True
+    else:
+        return False
 
 def get_greatest():
     """
@@ -38,7 +43,14 @@ def get_greatest():
     :returns: the greatest of the two input numbers, as an int.
     """
     #### write your solution for this function below here. ####
+    number_one = int(input("Enter an integer: "))
+    number_two = int(input("Enter another integer: "))
+    if number_two > number_one:
+        return number_two
+    else:
+        return number_one
 
+    
 
 def get_bmi_category():
     """
@@ -60,7 +72,26 @@ def get_bmi_category():
       :returns: The name of the BMI statistical category, based on the inputted height and weight.
     """
     #### write your solution for this function below here. ####
-
+    weight = float(input("Your weight (in pounds): "))
+    height = float(input("Your height (in inches): "))
+    BMI = 703 * weight / height / height
+    if float(BMI) < 15:
+        return "Very severely underweight"
+    elif 15 <= float(BMI) < 16:
+        return "Severely underweight"
+    elif 16 <= float(BMI) < 18.5:
+        return "Underweight"
+    elif 18.5 <= float(BMI) < 25:
+        return "Normal"
+    elif 25 <= float(BMI) < 30:
+        return "Overweight"
+    elif 30 <= float(BMI) < 35:
+        return "Moderately obese"
+    elif 35 <= float(BMI) < 40:
+        return "Severely obese"
+    else:
+        return "Very severely obese"
+  
 
 def get_discount():
     """
@@ -72,7 +103,15 @@ def get_discount():
       :returns: The cost of the masks, after any discounts, e.g. "$4,000" for 1000 masks.
     """
     #### write your solution for this function below here. ####
-
+    masks_needed = int(input("Number of masks needed: "))
+    money = masks_needed * 5 
+    if money >= 5000:
+        total = money * 0.8
+        return "$" f"{total:,.0f}"
+    else:
+        total_1 = money
+        return "$" f"{total_1:,.0f}"
+    
 
 def is_leap_year():
     """
@@ -81,7 +120,11 @@ def is_leap_year():
 
     :returns: True if the current year is a leap year, False otherwise.
     """
-    year = (
-        get_year()
-    )  # this line is given to you - the variable, year, holds the current year
+    # this line is given to you - the variable, year, holds the current year
     #### write your solution for this function below here. ####
+    
+    year = int(input("What year is this? "))
+    if [year / 4] is int:
+        return True
+    else:
+        return False
